@@ -23,7 +23,8 @@ pipeline {
 	stage('Registring image') {
         docker.withRegistry( 'https://' + registry, registryCredential ) {
     		newApp.push 'latest2'
-}
+        }
+	}
     }
    
     
