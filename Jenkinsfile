@@ -11,6 +11,8 @@ pipeline {
                 sh 'node --version'
                 sh 'svn --version'
             }
+        
+        }
         stage('Building image') {
             steps{
                 script {
@@ -18,7 +20,6 @@ pipeline {
         }
       }
     }
-        }
     }
    
     
