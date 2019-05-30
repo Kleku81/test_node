@@ -11,15 +11,16 @@ pipeline {
                 sh 'node --version'
                 sh 'svn --version'
             }
-        }
-    }
-   
-    stage('Building image') {
-      steps{
-        script {
-          docker.build registry + ":$BUILD_NUMBER"
+        stage('Building image') {
+            steps{
+                script {
+                      docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }
+        }
+    }
+   
+    
   
 }
